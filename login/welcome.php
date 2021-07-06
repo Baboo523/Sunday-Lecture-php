@@ -1,0 +1,9 @@
+<a href='logout.php'>Logout<a/>
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+session_destroy();
+header('location:login.php');
+}
+echo "Welcome";
+?>
